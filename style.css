@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background: rgb(188, 235, 238);
+}
+.navbar{
+    background: #11dac9;
+    justify-content: space-between;
+    height: 14vh;
+    padding-inline: 6rem;
+}
+.navbar,
+.navlist{
+    display: flex;
+    align-items: center;
+}
+.navlist{
+    gap: 3rem;
+}
+.logo{
+    font-size: 1.7rem;
+    color: white;
+}
+.links{
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;          /*underline remove*/
+    color: white;
+}
+.navlist li{
+    list-style: none;               /*bullets remove*/
+}
+.hamburger{
+display: none;
+}
+.line{
+    width: 2rem;
+    height: .2rem;
+    background: rgb(14, 1, 1);
+    margin: .5rem;                  /*hanmburger */
+    border-radius: 5rem;
+}
+input[type='checkbox']{
+    display: none;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media queries*/
+
+@media screen and (max-width: 750px){
+    .navlist{
+        flex-direction: column;
+        background: #191919;
+        position: absolute;
+        top: 30%;
+        left: -50%;
+        transform: translateX(-50%);
+        padding-block: 3rem;
+        width: 18rem;
+        border-radius: 1rem;
+        transition: .5s ease-in-out;
+    }
+    .navbar{
+        padding-inline: 2rem;
+    }
+    .hamburger{
+        display: block;
+    }
+    input[type='checkbox']:checked ~ .navlist{
+        left: 50%;
+    }
+}
